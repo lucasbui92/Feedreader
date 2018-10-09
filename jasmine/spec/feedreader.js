@@ -78,11 +78,12 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-          it('displays when clicked', function() {
+          it('displays when clicked and hides when clicked again', function() {
+              // Displays the menu
               menu_icon.click();
               expect(menu.classList).not.toContain("menu-hidden");
-          });
-          it('hides when clicked', function() {
+
+              // Hides the menu
               menu_icon.click();
               expect(menu.classList).toContain("menu-hidden");
           });
